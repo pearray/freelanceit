@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Growth-Focused Digital Marketer | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              display: ["Space Grotesk", "ui-sans-serif", "system-ui", "sans-serif"],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #020617; /* bg-slate-950 */
+        color: #f8fafc; /* text-slate-50 */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .font-display {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+
+      /* Custom Animation Classes */
+      .animate-on-scroll {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .animate-on-scroll.in-view {
+          opacity: 1;
+          transform: translateY(0);
+      }
+
+      .delay-100 { transition-delay: 100ms; }
+      .delay-200 { transition-delay: 200ms; }
+      .delay-300 { transition-delay: 300ms; }
+      .delay-400 { transition-delay: 400ms; }
+      .delay-500 { transition-delay: 500ms; }
+
+      /* Floating Animation */
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      /* Shimmer Text Effect */
+      @keyframes shimmer {
+        0% { background-position: 200% center; }
+        100% { background-position: -200% center; }
+      }
+      .animate-shimmer {
+        background-size: 200% auto;
+        animation: shimmer 6s linear infinite;
+      }
+
+      /* Card Hover Glow */
+      .card-dynamic {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .card-dynamic:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.3), 0 20px 40px -10px rgba(99, 102, 241, 0.15);
+        border-color: rgba(99, 102, 241, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-indigo-500/30">
+      <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b bg-transparent border-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+          <a href="#" class="font-display font-bold text-xl tracking-tight text-white flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-teal-400 flex items-center justify-center text-white">
+              F
+            </div>
+            Freelance IT<span class="text-slate-500">.</span>
+          </a>
+          
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
+            <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Services</a>
+            <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
+          </nav>
+
+          <a href="#contact" class="hidden md:flex h-10 items-center justify-center px-5 rounded-full bg-white text-slate-950 text-sm font-semibold hover:bg-slate-200 transition-colors">
+            Let's Talk
+          </a>
+
+          <!-- Mobile menu button -->
+          <button class="md:hidden text-slate-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero -->
+        <section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+          <!-- Background glow effects -->
+          <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+          <div class="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-teal-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+          <div class="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center">
+            <div class="mb-8 relative flex flex-col items-center animate-on-scroll">
+              <div class="relative inline-block mb-3 animate-float">
+                <img 
+                  src="https://scontent.fdac96-1.fna.fbcdn.net/v/t39.30808-1/720588527_122105712711351971_4098404925484543584_n.webp?stp=c349.0.840.840a_dst-png&cstp=mx840x840&ctp=s200x200&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeFOp29MFF9BE0CLQQP9H_YZF6a5cbUUtOkXprlxtRS06bniizUiLvp5JhlIKdq2r6u6SB_apRGC76Au0BHvdTuz&_nc_ohc=fZIsRximASgQ7kNvwFF1QLJ&_nc_oc=AdquT7KUjXS_LI_XH4Bs_LYoAVY8kTlLxmNYljaQGsNqmhZifxwgl2kbN3IVGUUGRkQ&_nc_zt=24&_nc_ht=scontent.fdac96-1.fna&_nc_gid=8lFLRzjzStYSjJC570Cjig&_nc_ss=7b2a8&oh=00_Af_LCR16p2Bv9tdS6SgjnwCKmA4OcsLus0rJHWbrbjkDBQ&oe=6A2EFBE0" 
+                  alt="Pear" 
+                  class="w-24 h-24 rounded-full border-4 border-slate-900 object-cover shadow-xl"
+                />
+                <div class="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 border-4 border-slate-900 rounded-full"></div>
+              </div>
+              <h2 class="text-xl font-display font-semibold text-white tracking-tight">Nirob</h2>
+            </div>
+
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-sm font-medium text-slate-300 mb-8 animate-on-scroll delay-100">
+              <span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+              Accepting new clients
+            </div>
+
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight text-white max-w-4xl leading-[1.1] animate-on-scroll delay-200">
+              Scale Your <span class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-teal-300 to-indigo-400 animate-shimmer">Revenue</span> With Data-Driven Marketing.
+            </h1>
+
+            <p class="mt-8 text-lg md:text-xl text-slate-400 max-w-2xl font-light animate-on-scroll delay-300">
+              Hi, I'm <strong class="text-white font-medium">Nirob</strong>. A Growth-Focused Digital Marketer helping small businesses attract more customers, build a stronger online presence, and multiply ROI.
+            </p>
+
+            <div class="mt-12 flex flex-col sm:flex-row gap-4 animate-on-scroll delay-400">
+              <a href="#contact" class="inline-flex h-14 items-center justify-center gap-2 px-8 rounded-full bg-white text-slate-950 font-medium hover:bg-slate-200 transition-colors">
+                Start Growing Today
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="#services" class="inline-flex h-14 items-center justify-center gap-2 px-8 rounded-full bg-slate-900 text-white font-medium hover:bg-slate-800 border border-slate-800 transition-colors">
+                Explore Services
+              </a>
+            </div>
+            
+            <!-- Metric Ribbons -->
+            <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full animate-on-scroll delay-500">
+              <div class="flex flex-col gap-2 items-center text-center p-6 rounded-2xl bg-slate-900/40 border border-slate-800/60 backdrop-blur-sm card-dynamic">
+                <span class="text-4xl lg:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">$500k+</span>
+                <span class="text-sm text-slate-400 font-medium tracking-wide uppercase">Ad Spend Managed</span>
+              </div>
+              <div class="flex flex-col gap-2 items-center text-center p-6 rounded-2xl bg-slate-900/40 border border-slate-800/60 backdrop-blur-sm card-dynamic">
+                <span class="text-4xl lg:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">3.5x+</span>
+                <span class="text-sm text-slate-400 font-medium tracking-wide uppercase">Average ROAS</span>
+              </div>
+              <div class="flex flex-col gap-2 items-center text-center p-6 rounded-2xl bg-slate-900/40 border border-slate-800/60 backdrop-blur-sm card-dynamic">
+                <span class="text-4xl lg:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">100%</span>
+                <span class="text-sm text-slate-400 font-medium tracking-wide uppercase">Client Satisfaction</span>
+              </div>
+              <div class="flex flex-col gap-2 items-center text-center p-6 rounded-2xl bg-slate-900/40 border border-slate-800/60 backdrop-blur-sm card-dynamic">
+                <span class="text-4xl lg:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">50+</span>
+                <span class="text-sm text-slate-400 font-medium tracking-wide uppercase">Projects Delivered</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ValueProp -->
+        <section id="about" class="py-24 md:py-32 bg-slate-900 relative overflow-hidden">
+          <div class="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-indigo-500/5 to-transparent pointer-events-none"></div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center flex-col-reverse lg:flex-row">
+              <div class="relative animate-on-scroll mt-12 lg:mt-0">
+                <!-- Main Image -->
+                <div class="aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden bg-slate-950 relative z-10 border border-slate-700 p-8 flex flex-col justify-end group">
+                  <img 
+                    src="https://scontent.fdac96-1.fna.fbcdn.net/v/t39.30808-6/720805330_122105714775351971_3144348807023295102_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1143&ctp=s960x960&_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeFuQOcig_2uhiPCIylUsJzLzHj3DqxewCbMePcOrF7AJpW6EfIX12KxswIPAkntPh0l_iYr_l1cCScFVlOwmhW6&_nc_ohc=E4Ukc4gIrk4Q7kNvwHwPAkw&_nc_oc=AdqTZp6oBAOcRNtorMrOBlxdY2Aw0e9xs6nIwqXiErDZrlW1K3l_1KvrOaavoW1cjsI&_nc_zt=23&_nc_ht=scontent.fdac96-1.fna&_nc_gid=8lFLRzjzStYSjJC570Cjig&_nc_ss=7b2a8&oh=00_Af_p9ASvK2ah-oN_94xudnQMwAYh37cXaMtAzbarw4Dm3A&oe=6A2F2D64" 
+                    alt="Nirob Profile" 
+                    class="absolute inset-0 w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent"></div>
+                  <div class="relative z-20 bg-slate-950/80 backdrop-blur border border-slate-800 p-6 rounded-2xl">
+                    <p class="text-lg font-medium text-white mb-2">"More than just a marketer."</p>
+                    <p class="text-sm text-slate-400">I partner with you as an extension of your team, treating your ad budget like my own.</p>
+                  </div>
+                </div>
+                <!-- Decorative element behind -->
+                <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-indigo-600/30 blur-3xl rounded-full z-0"></div>
+              </div>
+
+              <div class="animate-on-scroll delay-200">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                  Why small businesses choose me.
+                </h2>
+                
+                <p class="text-lg text-slate-400 mb-10">
+                  Small businesses often waste thousands on ads that don't convert. I bring a holistic, growth-focused approach that ties every compelling video and every ad campaign directly to your bottom line.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-950/40 border border-slate-800/60 hover:bg-slate-800/80 hover:border-slate-700 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-teal-400 shrink-0 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    <span class="text-slate-300 font-medium text-sm leading-relaxed">Attract qualified leads effortlessly.</span>
+                  </div>
+                  <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-950/40 border border-slate-800/60 hover:bg-slate-800/80 hover:border-slate-700 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-teal-400 shrink-0 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    <span class="text-slate-300 font-medium text-sm leading-relaxed">Maximize your Return on Ad Spend.</span>
+                  </div>
+                  <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-950/40 border border-slate-800/60 hover:bg-slate-800/80 hover:border-slate-700 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-teal-400 shrink-0 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    <span class="text-slate-300 font-medium text-sm leading-relaxed">Build a trusted online brand.</span>
+                  </div>
+                  <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-950/40 border border-slate-800/60 hover:bg-slate-800/80 hover:border-slate-700 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-teal-400 shrink-0 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    <span class="text-slate-300 font-medium text-sm leading-relaxed">Free up time for operations.</span>
+                  </div>
+                  <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-950/40 border border-slate-800/60 hover:bg-slate-800/80 hover:border-slate-700 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-teal-400 shrink-0 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    <span class="text-slate-300 font-medium text-sm leading-relaxed">Data-driven decisions, no guesswork.</span>
+                  </div>
+                  <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-950/40 border border-slate-800/60 hover:bg-slate-800/80 hover:border-slate-700 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-teal-400 shrink-0 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    <span class="text-slate-300 font-medium text-sm leading-relaxed">Engaging ads that convert.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="py-24 md:py-32 bg-slate-950">
+          <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+            <div class="mb-16 md:mb-24 max-w-3xl animate-on-scroll">
+              <p class="text-indigo-400 font-medium tracking-wider uppercase text-sm mb-4">My Expertise</p>
+              <h2 class="text-4xl md:text-5xl font-display font-bold text-white tracking-tight">Everything you need to scale your business online.</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+              <div class="p-8 rounded-[2rem] border border-slate-800/80 bg-slate-900/40 backdrop-blur-sm card-dynamic group animate-on-scroll delay-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                </div>
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border border-white/10 bg-gradient-to-br from-indigo-500/20 to-teal-400/20 shadow-inner group-hover:from-indigo-500/30 group-hover:to-teal-400/30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-indigo-400 drop-shadow-[0_0_8px_rgba(99,102,241,0.5)]"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10">Facebook & Instagram Ads</h3>
+                <p class="text-slate-400 leading-relaxed text-lg relative z-10">Highly targeted campaigns designed to convert. From cold traffic to retargeting, I cover the entire funnel.</p>
+              </div>
+
+              <div class="p-8 rounded-[2rem] border border-slate-800/80 bg-slate-900/40 backdrop-blur-sm card-dynamic group animate-on-scroll delay-200 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+                </div>
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border border-white/10 bg-gradient-to-br from-teal-500/20 to-emerald-400/20 shadow-inner group-hover:from-teal-500/30 group-hover:to-emerald-400/30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-teal-400 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10">Google Ads</h3>
+                <p class="text-slate-400 leading-relaxed text-lg relative z-10">Capture high-intent search traffic. I optimize for the right keywords to bring ready-to-buy customers to your site.</p>
+              </div>
+
+              <div class="p-8 rounded-[2rem] border border-slate-800/80 bg-slate-900/40 backdrop-blur-sm card-dynamic group animate-on-scroll delay-300 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
+                </div>
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border border-white/10 bg-gradient-to-br from-purple-500/20 to-fuchsia-400/20 shadow-inner group-hover:from-purple-500/30 group-hover:to-fuchsia-400/30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-purple-400 drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10">Ads Creative & Video</h3>
+                <p class="text-slate-400 leading-relaxed text-lg relative z-10">Scroll-stopping visuals and promotional videos that tell your brand story and compel viewers to take action.</p>
+              </div>
+
+              <div class="p-8 rounded-[2rem] border border-slate-800/80 bg-slate-900/40 backdrop-blur-sm card-dynamic group animate-on-scroll delay-400 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                </div>
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border border-white/10 bg-gradient-to-br from-blue-500/20 to-cyan-400/20 shadow-inner group-hover:from-blue-500/30 group-hover:to-cyan-400/30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-blue-400 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10">Content Marketing</h3>
+                <p class="text-slate-400 leading-relaxed text-lg relative z-10">Strategic content that builds authority, nurtures your audience, and organically grows your online presence.</p>
+              </div>
+
+              <div class="p-8 rounded-[2rem] border border-slate-800/80 bg-slate-900/40 backdrop-blur-sm card-dynamic group animate-on-scroll delay-500 relative overflow-hidden md:col-span-2 lg:col-span-1">
+                <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border border-white/10 bg-gradient-to-br from-amber-500/20 to-yellow-400/20 shadow-inner group-hover:from-amber-500/30 group-hover:to-yellow-400/30 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.5)]"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-white mb-4 relative z-10">Website Development</h3>
+                <p class="text-slate-400 leading-relaxed text-lg relative z-10">High-converting, responsive websites that look professional and are meticulously optimized for both users and search engines.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-24 md:py-32 bg-slate-950">
+          <div class="w-full max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid lg:grid-cols-2 gap-16">
+              <div class="animate-on-scroll">
+                <div class="mb-16 md:mb-24 max-w-3xl">
+                  <p class="text-indigo-400 font-medium tracking-wider uppercase text-sm mb-4">Let's Talk</p>
+                  <h2 class="text-4xl md:text-5xl font-display font-bold text-white tracking-tight">Ready to increase your revenue?</h2>
+                </div>
+                <p class="text-slate-400 text-lg mb-12 -mt-8">
+                  Whether you need a full funnel overhaul or scrolling-stopping ad creatives, let's discuss how we can hit your growth targets.
+                </p>
+
+                <div class="space-y-6">
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-slate-900 border border-slate-800 rounded-full flex items-center justify-center text-teal-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </div>
+                    <div>
+                      <p class="text-sm text-slate-500 font-medium">Email Me</p>
+                      <p class="text-white text-lg">hello@nirob.com</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-slate-900 border border-slate-800 rounded-full flex items-center justify-center text-emerald-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    </div>
+                    <div>
+                      <p class="text-sm text-slate-500 font-medium">WhatsApp</p>
+                      <p class="text-white text-lg">+1 (555) 123-4567</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-slate-900 border border-slate-800 rounded-full flex items-center justify-center text-blue-500">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </div>
+                    <div>
+                      <p class="text-sm text-slate-500 font-medium">Facebook</p>
+                      <a href="https://web.facebook.com/profile.php?id=61590559146899" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-blue-400 transition-colors">
+                        View Profile
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-slate-900 border border-slate-800 rounded-full flex items-center justify-center text-blue-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </div>
+                    <div>
+                      <p class="text-sm text-slate-500 font-medium">LinkedIn</p>
+                      <a href="https://www.linkedin.com/in/pear-ray-936898415/" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-blue-300 transition-colors">
+                        View Profile
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-slate-900 border border-slate-800 rounded-full flex items-center justify-center text-purple-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                      <p class="text-sm text-slate-500 font-medium">Location</p>
+                      <p class="text-white text-lg">Available Worldwide (Remote)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-slate-900/50 backdrop-blur-sm border border-slate-800/80 rounded-[2rem] p-8 md:p-10 animate-on-scroll delay-200 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-32 -right-32 w-64 h-64 bg-indigo-500/10 blur-3xl rounded-full z-0 pointer-events-none"></div>
+                <form class="space-y-6 relative z-10" onsubmit="event.preventDefault()">
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-5 py-4 text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all shadow-inner hover:border-slate-700"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-5 py-4 text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all shadow-inner hover:border-slate-700"
+                      placeholder="you@company.com"
+                    />
+                  </div>
+                  <div>
+                    <label for="message" class="block text-sm font-medium text-slate-300 mb-2">How can I help you grow?</label>
+                    <textarea 
+                      id="message" 
+                      rows="4"
+                      class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-5 py-4 text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all resize-none shadow-inner hover:border-slate-700"
+                      placeholder="We are looking to scale our campaigns..."
+                    ></textarea>
+                  </div>
+                  <button 
+                    type="submit"
+                    class="w-full h-14 bg-gradient-to-r from-indigo-500 to-teal-400 hover:from-indigo-600 hover:to-teal-500 text-white font-bold tracking-wide rounded-xl transition-all shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transform hover:-translate-y-0.5"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-slate-800 bg-slate-950 py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded-md bg-gradient-to-br from-indigo-500 to-teal-400 opacity-80 flex items-center justify-center text-[10px] font-bold text-white">F</div>
+            <span class="font-display font-medium text-white">Freelance IT.</span>
+          </div>
+          
+          <p class="text-slate-500 text-sm">
+            &copy; <span id="current-year"></span> Nirob. Helping small businesses thrive.
+          </p>
+
+          <div class="flex items-center gap-6 text-sm text-slate-400">
+            <a href="https://web.facebook.com/profile.php?id=61590559146899" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Facebook</a>
+            <a href="https://www.linkedin.com/in/pear-ray-936898415/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Intersection Observer for animations
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+          observer.observe(el);
+        });
+
+        // Sticky Header
+        const header = document.getElementById('header');
+        if (header) {
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+              header.classList.add('bg-slate-950/80', 'backdrop-blur-md', 'border-slate-800', 'py-4');
+              header.classList.remove('bg-transparent', 'border-transparent', 'py-6');
+            } else {
+              header.classList.add('bg-transparent', 'border-transparent', 'py-6');
+              header.classList.remove('bg-slate-950/80', 'backdrop-blur-md', 'border-slate-800', 'py-4');
+            }
+          });
+        }
+
+        // Footer year
+        const yearEl = document.getElementById('current-year');
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear().toString();
+        }
+      });
+    </script>
+  </body>
+</html>
+
